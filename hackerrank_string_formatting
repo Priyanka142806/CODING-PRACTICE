@@ -5,12 +5,13 @@
 
 def print_formatted(number):
     width=len(str(bin(number))[2: ])                                                           #to remove 0b,0o we use slicing method 
-    for i in range(1,number+1):
-        print(str(i).rjust(width,' '),oct(i)[2: ].rjust(width,' '),hex(i)[2: ].upper()         #to maintain the required space we use rjust 
-        .rjust(width,' '),bin(i)[2: ].rjust(width,' '))                                         #value of width is obtained from the length of the binary form of the last number
+                                                                                               #value of width is obtained from the length of the binary form of the last number
                                                                                                 #to be able to use string allignment we carry out string conversion
     
 
+    for i in range(1,number+1):
+        print(str(i).rjust(width,' '),oct(i)[2: ].rjust(width,' '),hex(i)[2: ].upper()         #to maintain the required space we use rjust 
+        .rjust(width,' '),bin(i)[2: ].rjust(width,' '))                                         
 if __name__ == '__main__':
     n = int(input())
     print_formatted(n)
