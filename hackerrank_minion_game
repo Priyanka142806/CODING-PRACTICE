@@ -55,7 +55,7 @@ def minion_game(s):
     elif kevin<stuart:
         print('Stuart',stuart)
     else:
-        print('draw')
+        print('Draw')
             
 if __name__ == '__main__':
     s = input()
